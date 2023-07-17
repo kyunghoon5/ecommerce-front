@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import WestOutlinedIcon from '@mui/icons-material/WestOutlined';
 
@@ -19,16 +19,15 @@ const Billboard = () => {
   const nextSlide = () => {
     setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
   };
- const intervalId = setInterval(() => {
-   nextSlide();  
- }, 10000);
+  const intervalId = setInterval(() => {
+    nextSlide();
+  }, 12000);
 
- useEffect(() => {
-   return () => {
-     clearInterval(intervalId);
-   };
- }, [currentSlide, intervalId]);
- 
+  useEffect(() => {
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [currentSlide, intervalId]);
 
   return (
     <div className=" relative overflow-hidden  w-full h-[calc(100vh-80px)]">
