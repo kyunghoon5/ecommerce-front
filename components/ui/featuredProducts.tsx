@@ -11,7 +11,7 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ type }) => {
     {
       id: 1,
       img: 'https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600',
-      img2: '/img/en.png',
+      img2: 'https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600',
       title: 'Long Sleeve Graphic T-shirt',
       isNew: true,
       oldPrice: 19,
@@ -19,8 +19,8 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ type }) => {
     },
     {
       id: 2,
-      img: '/img/en.png',
-      img2: 'https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      img: 'https://images.pexels.com/photos/1972115/pexels-photo-1972115.jpeg?auto=compress&cs=tinysrgb&w=1600',
+      img2: 'https://images.pexels.com/photos/1163194/pexels-photo-1163194.jpeg?auto=compress&cs=tinysrgb&w=1600',
       title: 'Cost',
       isNew: true,
       oldPrice: 19,
@@ -48,10 +48,10 @@ const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ type }) => {
   return (
     <div className="my-[100px] mx-[200px]">
       <div className="flex items-center justify-between mb-[50px]">
-        <h1 className=" flex-2 capitalize font-bold text-[20px]">
+        <h1 className=" flex-[2] capitalize font-bold text-[20px]">
           {type} products
         </h1>
-        <p className=" flex-3 text-gray-400">
+        <p className=" flex-[3] text-gray-400">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
           nobis facilis debitis explicabo veniam quisquam, repellat tempore,
           quam inventore praesentium amet. Totam ullam dolores nisi praesentium
