@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
+
+
 const Categories = () => {
   return (
     <div className="flex h-[80vh] gap-[10px] m-[10px]">
