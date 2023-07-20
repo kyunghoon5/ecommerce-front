@@ -1,35 +1,44 @@
-"use client"
+'use client';
 
 import List from '@/components/ui/list';
 import React, { useState } from 'react';
 
-const CategoryPage = () => {
+import { Data } from '@/types';
 
 
-  const[maxPrice,setMaxPrice] =useState<number>(1000)
-  const [sort, setSort] = useState<string | null>(null);
+
+const CategoryPage= () => {
   
+  const [maxPrice, setMaxPrice] = useState<number>(1000);
+  const [sort, setSort] = useState<string | null>(null);
+
   return (
-    <div className="products">
-      <div className="left">
-        <div className="fillteriTEM">
-          <h2>Product Categories</h2>
-          <div className="InputItem">
+    <div className="flex py-[30px] px-[50px]">
+      <div className="flex-[1] sticky h-[100%] top-[50px]">
+        <div className="mb-[30px]">
+          <h2 className="font-[600] text-xl mb-[20px]">Product Categories</h2>
+          <div className="mb-[10px]">
             <input type="checkbox" id="1" value={1} />
-            <label htmlFor="1">Shoes</label>
+            <label className="ml-10px" htmlFor="1">
+              Shoes
+            </label>
           </div>
-          <div className="InputItem">
+          <div className="mb-[10px]">
             <input type="checkbox" id="2" value={2} />
-            <label htmlFor="2">Skirts</label>
+            <label className="ml-10px" htmlFor="2">
+              Skirts
+            </label>
           </div>
-          <div className="InputItem">
+          <div className="mb-[10px]">
             <input type="checkbox" id="3" value={3} />
-            <label htmlFor="3">Coats</label>
+            <label className="ml-10px" htmlFor="3">
+              Coats
+            </label>
           </div>
         </div>
-        <div className="fillteriTEM">
-          <h2>Filter by price</h2>
-          <div className="inputItem">
+        <div className="mb-[30px]">
+          <h2 className="font-[600] text-xl mb-[20px]">Filter by price</h2>
+          <div className="mb-[10px]">
             <span>0</span>
             <input
               type="range"
@@ -43,9 +52,9 @@ const CategoryPage = () => {
             <span>{maxPrice}</span>
           </div>
         </div>
-        <div className="fillteriTEM">
-          <h2>Sort by</h2>
-          <div className="inputItem">
+        <div className="mb-[30px]">
+          <h2 className="font-[600] text-xl mb-[20px]">Sort by</h2>
+          <div className="mb-[10px]">
             <input
               type="radio"
               id="asc"
@@ -53,9 +62,11 @@ const CategoryPage = () => {
               name="price"
               onChange={(e) => setSort('asc')}
             />
-            <label htmlFor="desc">Price (Lowest first)</label>
+            <label className="ml-10px" htmlFor="desc">
+              Price (Lowest first)
+            </label>
           </div>
-          <div className="inputItem">
+          <div className="mb-[10px]">
             <input
               type="radio"
               id="asc"
@@ -63,17 +74,19 @@ const CategoryPage = () => {
               name="price"
               onChange={(e) => setSort('desc')}
             />
-            <label htmlFor="desc">Price (Highest first)</label>
+            <label className="ml-10px" htmlFor="desc">
+              Price (Highest first)
+            </label>
           </div>
         </div>
       </div>
-      <div className="right">
+      <div className="flex-[3]">
         <img
-          className="catImg"
+          className="w-[100%] h-[300px] object-cover mb-[50px]"
           src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt=""
         />
-        <List maxPrice={maxPrice} sort={sort}/>
+        <List  maxPrice={maxPrice} sort={sort} />
       </div>
     </div>
   );

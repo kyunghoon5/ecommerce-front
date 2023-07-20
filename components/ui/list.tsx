@@ -3,7 +3,13 @@ import { Data } from '@/types';
 
 import Card from './card';
 
-const List = () => {
+interface ListProps{
+  maxPrice: number
+  sort: string | null
+
+}
+
+const List: React.FC<ListProps> = ({maxPrice,sort}) => {
 
    const data: Data[] = [
      {
@@ -44,7 +50,7 @@ const List = () => {
      },
    ];
   return (
-    <div>{data?.map(item=>(
+    <div className="flex justify-between flex-wrap">{data?.map(item=>(
       <Card item={item} key={item.id}/>
     ))}</div>
   )

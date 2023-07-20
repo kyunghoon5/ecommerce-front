@@ -10,7 +10,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ item }) => {
   return (
     <Link href={`/product/${item.id}`}>
-      <div className=" w-[280px] flex flex-col gap-[10px]">
+      <div className=" w-[280px] flex flex-col gap-[10px] mb-[50px]">
         <div className="w-[100%] h-[400px] overflow-hidden relative ">
           {item.isNew && (
             <span className="absolute top-[5px] left-[5px] bg-white text-teal-500 py-[3px] px-[5px] z-[3] font-[500] text-[12px]">

@@ -7,6 +7,7 @@ interface FeaturedProductsProps {
 }
 
 const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ type }) => {
+  
   const data: Data[] = [
     {
       id: 1,
