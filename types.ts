@@ -6,4 +6,5 @@ export interface  Data {
   isNew: boolean;
   oldPrice: number;
   price: number;
+ 
 }[];

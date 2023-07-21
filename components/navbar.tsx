@@ -1,4 +1,7 @@
-import React from 'react';
+"use client"
+
+import React, { useState } from 'react';
+import Link from 'next/link';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
@@ -6,9 +9,11 @@ import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 import Container from '@/components/ui/container';
-import Link from 'next/link';
+import Cart from '@/components/ui/cart';
 
 const Navbar = () => {
+const [open, setOpen] = useState(false)
+
   return (
     <div className="pt-[10px] pb-[10px] pl-[30px] pr-[30px] h-[80px]">
       <Container>
@@ -52,13 +57,14 @@ const Navbar = () => {
             <SearchIcon />
             <PersonOutlineIcon />
             <FavoriteBorderIcon />
-            <div className="cartIcon">
-              <ShoppingCartOutlinedIcon />
+            <div className="cartIcon" onClick={()=>setOpen(!open)}>
+              <ShoppingCartOutlinedIcon  />
               <span>0</span>
             </div>
           </div>
         </div>
       </Container>
+      {open && <Cart/>}
     </div>
   );
 };
